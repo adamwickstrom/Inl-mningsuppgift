@@ -20,7 +20,7 @@ namespace inlamningsuppgift_metoder
         static double CirkelArea(double radie)
         {
             return (radie * radie * 3.14);
-         }
+        }
 
 
 
