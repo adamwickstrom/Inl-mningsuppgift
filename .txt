@@ -1,0 +1,5 @@
+Skriv in ett tal mellan 1 och 100
+Programmet kommer att säga till dig om du har gissat för lågt, för högt eller rätt tal
+följ instruktionerna tills du har gissat rätt tal
+
+
