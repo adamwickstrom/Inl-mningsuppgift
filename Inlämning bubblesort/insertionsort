@@ -1,0 +1,55 @@
+using System;
+
+namespace Insertion
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] size = { 100, 1000, 10000 };
+            int[] lista = randomNummer(size[1]);
+            Insertion(lista);
+        }
+        static void Insertion(int[] lista)
+        {
+            DateTime starttid = DateTime.Now;
+
+
+            for (int i = 1; i < lista.Length; i++)
+            {
+
+                for (int j = i; j > 0; j--)
+                { 
+
+                    if (lista[j] < lista[j - 1])
+                    {
+
+                        int temp = lista[j - 1];
+                        lista[j - 1] = lista[j];
+                        lista[j] = temp;
+                    }
+                }
+            }
+
+            TimeSpan tid = DateTime.Now - starttid;
+
+            for (int f = 0; f < lista.Length; f++)
+            {
+                Console.WriteLine(lista[f]);
+            }
+
+            Console.WriteLine($"{tid.TotalSeconds}s");
+        }
+        static int[] randomNummer(int size)
+        {
+            Random slump = new Random();
+            int[] nummer = new int[size];
+            for (int i = 0; i < nummer.Length; i++)
+            {
+                nummer[i] = slump.Next(nummer.Length);
+            }
+            return nummer;
+        }
+
+    }
+} 
