@@ -2,7 +2,7 @@
 
 namespace BubbleSort
 {
-    class program
+    class Program
     {
         static void Main(string[] args)
         {
